@@ -1,0 +1,6 @@
+<div class="ember-flowy-wrapper" {{did-insert (fn this.setNodeRef "wrapper")}} {{on "mousedown" (fn this.beginDrag)}} {{on "mousedown" (fn this.touchBlock)}} {{on "touchstart" (fn this.beginDrag)}} {{on "touchstart" (fn this.touchBlock)}} {{on "mouseup" (fn this.touchBlock)}} {{on "mousemove" (fn this.moveBlock)}} {{on "touchmove" (fn this.moveBlock)}} {{on "mouseup" (fn this.endDrag)}} {{on "touchend" (fn this.endDrag)}}>
+    <canvas class="ember-flowy" {{did-insert this.setupComponent}} ...attributes>
+        <div class="indicator invisible" {{did-insert (fn this.setNodeRef "indicator")}}></div>
+        {{yield}}
+    </canvas>
+</div>
